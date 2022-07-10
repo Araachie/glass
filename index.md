@@ -1,13 +1,9 @@
-<table align="center">
-  <tr>
-    <td>
-      <p align="center">
-        <b style="font-size: 24px">Paper:</b><br>
-        <a href="https://arxiv.org/abs/2204.06558" style="font-size: 24px; text-decoration: none">[Arxiv]</a>
-      </p>
-    </td>
-  </tr>
-</table>
+----------------------------
+
+<p align="center">
+  <b style="font-size: 24px">Paper:</b><br>
+  <a href="https://arxiv.org/abs/2204.06558" style="font-size: 24px; text-decoration: none">[Arxiv]</a>
+</p>
 
 ### Abstract
 
