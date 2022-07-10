@@ -1,0 +1,169 @@
+# Experiment name
+name: "tennis"
+
+# Dataset parameters
+data:
+  # Path to the folder containing videos
+  data_root: "./data/tennis"
+  # Dataset style splitted/flat
+  dataset_style: "splitted"
+  # Crop to apply to each frame [left_index, upper_index, right_index, lower_index]
+  crop: [0, 0, 256, 96]
+  # Input size [width, height]
+  input_size: [256, 96]
+
+# Model parameters
+model:
+  # Parameters for the representation network
+  masking_network:
+    # Number of input channels = 3 * observation_stacking
+    in_channels: 3
+
+  # Parameters for the inpainting network
+  inpainting_network:
+
+  # Parameters for the motion network
+  motion_network:
+
+  # Action separator parameters
+  action_separator:
+    # Parameters for the representation network
+    representation_network:
+      # Number of input channels = 3 * observation_stacking
+      in_channels: 3
+      # Dim of state features
+      out_channels: 64
+
+    # Parameters for state compressor network
+    state_compressor:
+      # Number of output channels
+      out_channels: 16
+
+    # Parameters for the action network
+    action_network:
+      # Number of actions to detect
+      num_actions: 4
+      # The dimension of the action space
+      action_space_dimension: 16
+      # State size
+      state_size: 64
+
+    # Parameters for the dynamics network
+    dynamics_network:
+      # State size
+      state_size: 16
+      # State resolution
+      state_resolution: [ 12, 32 ]
+      # Hidden state size
+      hidden_state_size: 64
+      # Number of actions to detect
+      num_actions: 4
+      # The dimension of the action space
+      action_space_dimension: 16
+      # Injected random noise size
+      noise_size: 8
+
+    # Parameters for rendering network
+    rendering_network:
+      # Number of input channels
+      in_channels: 64
+      # Number of output channels
+      out_channels: 3
+
+
+training:
+  # Total number of epochs to train the model for
+  num_epochs: 1000000
+
+  # Parameters for batch building
+  batching:
+    # Batch_size * Num_gpus = 12
+    batch_size: 4
+    num_workers: 8
+
+    # Number of observations that each batch sample possesses
+    observations_count: 12
+    # Number of frames to skip between each observation
+    skip_frames: 4
+    # Total number of frames that compose an observation
+    observation_stacking: 1
+
+  # Parameters for the optimizer
+  optimizer:
+    learning_rate: 0.0004
+    weight_decay: 0.000001
+
+  # Number of steps to pretrain the masking network for
+  pretraining_steps_gma: 3000
+
+  # Number of observations in the sequence at the beginning of the training
+  num_observations_start: 6
+  # Number of observations in the sequence at the end of the training
+  num_observations_end: 11
+  # When to start increasing the number of observations in the sequence
+  num_observations_increase_start: 50000
+  # The period in steps to increase the number of observations in the sequence
+  num_observations_steps: 30000
+
+  # Number of ground truth observations in the sequence at the beginning of the training
+  gt_observations_start: 5
+  # Number of ground truth observations in the sequence at the end of the training
+  gt_observations_end: 1
+  # When to start decreasing the number of ground truth observations in the sequence
+  gt_observations_decrease_start: 3000
+  # The period in steps to decrease the number of ground truth observations in the sequence
+  gt_observations_steps: 25000
+
+  # Gumbel temperature to use at the beginning of training
+  gumbel_temperature_start: 0.4
+  # Gumbel temperature to use at the end of the annealing period
+  gumbel_temperature_end: 0.4
+  # When to start decreasing the gumbel temperature
+  gumbel_temperature_decrease_start: 6000
+  # Length in steps of the annealing period
+  gumbel_temperature_steps: 20000
+
+  # Steps at which to switch learning rate
+  lr_schedule: [ 300000, 1000000 ]
+  # Gamma parameter for lr scheduling
+  lr_gamma: 0.3333
+
+  # Parameters for the losses
+  loss_params:
+    mask_size: 0.01
+
+  # Parameters for loss weighting
+  loss_weights:
+    # GLM losses
+    reconstruction_loss: 1.0
+    foreground_loss: 1.0
+    background_loss: 2.0
+    background_perceptual_loss: 0.02
+    binary_mask_loss: 0.5
+    mask_size_loss: 0.1
+    # LAS losses
+    multiscale_global_reconstruction_loss: 1.0
+    multiscale_local_reconstruction_loss: 1.0
+    multiscale_local_perceptual_loss: 1.0
+    local_state_reconstruction_loss: 0.2
+    local_action_vq_loss: 0.1
+    mask_reconstruction_loss: 0.2
+
+evaluation:
+  # Parameters for batch building
+  batching:
+    batch_size: 2
+    num_workers: 8
+
+    # Number of observations that each batch sample possesses
+    observations_count: 16
+    # Number of frames to skip between each observation
+    skip_frames: 0
+    # Total number of frames that compose an observation
+    observation_stacking: 1
+
+  # Gumbel temperature to use at evaluation
+  gumbel_temperature: 0.4
+
+  # Path to the evaluation dataset
+  evaluation_dataset_directory: "./data/tennis/evaluation_dataset"
