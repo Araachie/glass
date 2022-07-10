@@ -69,7 +69,8 @@ To generate *W-Sprites* dataset, first activate the environment specified in the
 2. python random_character.py
 3. python frame_to_npy.py
 4. cd ../../../
-5. python -m data.wsprites.generate
+5. mkdir data/wsprites/data
+6. python -m data.wsprites.generate
 ```
 
 This will create training sequences in the `data/wsprites/data` folder.
