@@ -24,6 +24,206 @@
 }
 </style>
 
+
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .accordion__item {
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%);
+  }
+
+  .accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    font-weight: 500;
+    background-color: #0d6efd;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+  }
+
+  .accordion__header::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    content: "";
+    transition: transform 0.2s ease-out;
+  }
+
+  .accordion__item_show .accordion__header::after,
+  .accordion__item_slidedown .accordion__header::after {
+    transform: rotate(-180deg);
+  }
+
+  .accordion__header:hover {
+    background-color: #0b5ed7;
+  }
+
+  .accordion__item:not(.accordion__item_show) .accordion__header {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .accordion__content {
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .accordion__item:not(.accordion__item_show) .accordion__body {
+    display: none;
+  }
+</style>
+<script>
+  class ItcAccordion {
+    constructor(target, config) {
+      this._el = typeof target === 'string' ? document.querySelector(target) : target;
+      const defaultConfig = {
+        alwaysOpen: true,
+        duration: 350
+      };
+      this._config = Object.assign(defaultConfig, config);
+      this.addEventListener();
+    }
+    addEventListener() {
+      this._el.addEventListener('click', (e) => {
+        const elHeader = e.target.closest('.accordion__header');
+        if (!elHeader) {
+          return;
+        }
+        if (!this._config.alwaysOpen) {
+          const elOpenItem = this._el.querySelector('.accordion__item_show');
+          if (elOpenItem) {
+            elOpenItem !== elHeader.parentElement ? this.toggle(elOpenItem) : null;
+          }
+        }
+        this.toggle(elHeader.parentElement);
+      });
+    }
+    show(el) {
+      const elBody = el.querySelector('.accordion__body');
+      if (elBody.classList.contains('collapsing') || el.classList.contains('accordion__item_show')) {
+        return;
+      }
+      elBody.style['display'] = 'block';
+      const height = elBody.offsetHeight;
+      elBody.style['height'] = 0;
+      elBody.style['overflow'] = 'hidden';
+      elBody.style['transition'] = `height ${this._config.duration}ms ease`;
+      elBody.classList.add('collapsing');
+      el.classList.add('accordion__item_slidedown');
+      elBody.offsetHeight;
+      elBody.style['height'] = `${height}px`;
+      window.setTimeout(() => {
+        elBody.classList.remove('collapsing');
+        el.classList.remove('accordion__item_slidedown');
+        elBody.classList.add('collapse');
+        el.classList.add('accordion__item_show');
+        elBody.style['display'] = '';
+        elBody.style['height'] = '';
+        elBody.style['transition'] = '';
+        elBody.style['overflow'] = '';
+      }, this._config.duration);
+    }
+    hide(el) {
+      const elBody = el.querySelector('.accordion__body');
+      if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion__item_show')) {
+        return;
+      }
+      elBody.style['height'] = `${elBody.offsetHeight}px`;
+      elBody.offsetHeight;
+      elBody.style['display'] = 'block';
+      elBody.style['height'] = 0;
+      elBody.style['overflow'] = 'hidden';
+      elBody.style['transition'] = `height ${this._config.duration}ms ease`;
+      elBody.classList.remove('collapse');
+      el.classList.remove('accordion__item_show');
+      elBody.classList.add('collapsing');
+      window.setTimeout(() => {
+        elBody.classList.remove('collapsing');
+        elBody.classList.add('collapse');
+        elBody.style['display'] = '';
+        elBody.style['height'] = '';
+        elBody.style['transition'] = '';
+        elBody.style['overflow'] = '';
+      }, this._config.duration);
+    }
+    toggle(el) {
+      el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
+    }
+  }
+</script>
+
+<div id="accordion" class="accordion" style="max-width: 30rem; margin: 1rem auto;">
+  <div class="accordion__item">
+    <div class="accordion__header">
+      Заголовок 1
+    </div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur autem, mollitia rem aperiam
+        fugit eos officia vel quidem quis officiis dolores porro beatae veritatis tenetur. Culpa ex libero a!
+      </div>
+    </div>
+  </div>
+  <div class="accordion__item">
+    <div class="accordion__header">
+      Заголовок 2
+    </div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos a autem perspiciatis sit eum
+        exercitationem expedita omnis ipsam voluptate veritatis dolores similique eligendi, earum quasi officia in
+        facilis dolorum!
+      </div>
+    </div>
+  </div>
+  <div class="accordion__item">
+    <div class="accordion__header">
+      Заголовок 3
+    </div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta pariatur dolore consectetur perferendis libero
+        nam sit magni voluptatibus voluptates autem nesciunt, praesentium quidem deserunt ipsa totam esse ullam? Quod,
+        maiores!
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  new ItcAccordion(document.querySelector('.accordion'), {
+    alwaysOpen: true
+  });
+</script>
+
 ----------------------------
 
 <p align="center">
@@ -134,10 +334,4 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-</script>
-  
-<script type="text/javascript">
-// JavaScript example
-
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
 </script>
