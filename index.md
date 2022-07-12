@@ -35,7 +35,7 @@ Two input frames <img src="https://latex.codecogs.com/svg.image?I_t"> and <img s
 
 We feed the segmented foreground <img src="https://latex.codecogs.com/svg.image?f_t">, its shifted version and <img src="https://latex.codecogs.com/svg.image?f_{t+1}"> separately as inputs to an encoder network to obtain features <img src="https://latex.codecogs.com/svg.image?\phi_t">, <img src="https://latex.codecogs.com/svg.image?\tilde\phi_t"> and <img src="https://latex.codecogs.com/svg.image?\phi_{t+1}"> respectively. The latter two features are then mapped to an action at by the action network. A further encoding of <img src="https://latex.codecogs.com/svg.image?\phi_t"> into <img src="https://latex.codecogs.com/svg.image?e_t">, the previous state <img src="https://latex.codecogs.com/svg.image?s_t">, and the local action <img src="https://latex.codecogs.com/svg.image?a_t"> and global action <img src="https://latex.codecogs.com/svg.image?\Delta_F"> are fed as input to the RNN to predict the next state <img src="https://latex.codecogs.com/svg.image?s_{t+1}">. Finally, a decoder maps the state <img src="https://latex.codecogs.com/svg.image?s_{t+1}"> to the next foreground <img src="https://latex.codecogs.com/svg.image?\hat&space;f_{t+1}">, which is matched to the original foreground <img src="https://latex.codecogs.com/svg.image?f_{t+1}"> via the reconstruction loss.
 
-### W-Sprites
+<h2>W-Sprites</h2>
 
 In order to assess and ablate the components of GLASS, we build a synthetic video dataset of cartoon characters acting on a moving background. We call the dataset *W-Sprites* (for Walking Sprites).
 
@@ -49,11 +49,11 @@ Here we provide some sample videos from the *W-Sprites* dataset:
 </p>
 
 
-### Results
+<h2>Results</h2>
 
 ...
 
-### Citation
+<h2>Citation</h2>
  
 The paper is to appear in the Proceedings of the 17th European Conference on Computer Vision in 2022. 
 In the meantime we suggest using the arxiv preprint bibref.
