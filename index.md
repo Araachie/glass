@@ -102,15 +102,15 @@ GLASS automatically separates the foreground from the background in video sequen
 
 <details>
   <summary><i>W-Sprites</i></summary>
-  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
 </details>
 <details>
   <summary><i>Tennis</i></summary>
-  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178578377-451b921f-f7e6-4a73-81ef-6f6fed8f57bf.gif"></p>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178578377-451b921f-f7e6-4a73-81ef-6f6fed8f57bf.gif"></p>
 </details>
 <details>
   <summary><i>BAIR</i></summary>
-  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178578501-ec41c0b2-28fd-4545-b60c-1fbdf52e616d.gif"></p>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178578501-ec41c0b2-28fd-4545-b60c-1fbdf52e616d.gif"></p>
 </details>
 
 <p align="center">
