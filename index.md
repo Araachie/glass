@@ -51,7 +51,20 @@ Here we provide some sample videos from the *W-Sprites* dataset:
 
 ## Results
 
-...
+GLASS automatically separates the foreground from the background in video sequences and discovers most relevant global and local actions that can be used at inference time to generate diverse videos. Trained GLASS can be used in a variety of applications: from controllable generation to motion transfer. We test our model on the *W-Sprites*, the *Tennis* and the *BAIR* datasets.
+
+<p align="center">
+  <b>Global Actions</b><br>
+  <button class="accordion"><i>W-Sprites</i></button>
+  <div class="panel">
+    <img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif">
+  </div>
+</p>
+
+<p align="center">
+  <b>Controllable generation</b><br>
+  <img src="https://user-images.githubusercontent.com/32042066/178519016-d447fe4a-2d43-4495-baab-82b85de6a30a.png">
+</p>
 
 ## Citation
  
