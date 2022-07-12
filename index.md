@@ -12,7 +12,7 @@
   summary {
     padding: 1rem;
     display: block;
-    background: rgb(26, 122, 118);
+    background: rgba(30, 138, 101, 0.5);
     padding-left: 2.2rem;
     position: relative;
     cursor: pointer;
