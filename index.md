@@ -4,7 +4,6 @@
     margin: 0 auto ;
     background: rgb(255, 255, 255);
     margin-bottom: .5rem;
-    box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
     border-radius: 5px;
     overflow: hidden;
   }
