@@ -188,7 +188,7 @@ GLASS automatically separates the foreground from the background in video sequen
     <img width=150 src="https://user-images.githubusercontent.com/32042066/178587850-9a7e440e-5ef7-4bcf-84ba-4e53bba4ba4e.gif">
   </p>
   <p align="center">
-    Row by row: Original videos, reconstruction and motion transfer examples on the Tennis dataset. Note the ability of GLASS to generate very diverse videos from the same initial frame.
+    Row by row: Original videos, reconstruction and motion transfer examples on the BAIR dataset. Note the ability of GLASS to generate very diverse videos from the same initial frame.
   </p>
 </details>
 
