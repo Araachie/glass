@@ -247,7 +247,7 @@ GLASS automatically separates the foreground from the background in video sequen
     </div>
     <div class="accordion__body">
       <div class="accordion__content">
-        <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
+        <img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif">
       </div>
     </div>
   </div>
@@ -257,7 +257,7 @@ GLASS automatically separates the foreground from the background in video sequen
     </div>
     <div class="accordion__body">
       <div class="accordion__content">
-        <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527099-b0ca39a0-72c0-4de4-aabc-d8a4575b3e3b.gif"></p>
+        <img src="https://user-images.githubusercontent.com/32042066/178527099-b0ca39a0-72c0-4de4-aabc-d8a4575b3e3b.gif">
       </div>
     </div>
   </div>
@@ -267,7 +267,7 @@ GLASS automatically separates the foreground from the background in video sequen
     </div>
     <div class="accordion__body">
       <div class="accordion__content">
-        <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527406-b146ba7f-74c2-433f-9a6e-d033ac2390a4.gif"></p>
+        <img src="https://user-images.githubusercontent.com/32042066/178527406-b146ba7f-74c2-433f-9a6e-d033ac2390a4.gif">
       </div>
     </div>
   </div>
