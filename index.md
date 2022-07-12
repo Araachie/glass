@@ -38,16 +38,6 @@
   details summary::-webkit-details-marker {
     display:none;
   }
-
-  body {
-    background: #222;
-    height: 100vh;
-    font-family: sans-serif;
-    color: white;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    margin-top: 2rem;
-  }
 </style>
 
 ----------------------------
