@@ -105,15 +105,38 @@ GLASS automatically separates the foreground from the background in video sequen
 
 <details>
   <summary><i>W-Sprites</i></summary>
-  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p><br>
+  <p align="center">Each row starts with the same frame. Each column corresponds to one of the global actions, from left to right: right, left, down, up and stay.</p>
 </details>
 <details>
   <summary><i>Tennis</i></summary>
-  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178578377-451b921f-f7e6-4a73-81ef-6f6fed8f57bf.gif"></p>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178578377-451b921f-f7e6-4a73-81ef-6f6fed8f57bf.gif"></p><br>
+  <p align="center">Each row starts with the same frame. Each column corresponds to one of the global actions, from left to right: right, left, down, up and stay.</p>
 </details>
 <details>
   <summary><i>BAIR</i></summary>
   <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178578501-ec41c0b2-28fd-4545-b60c-1fbdf52e616d.gif"></p>
+  <p align="center">Each row starts with the same frame. Each column corresponds to one of the global actions, from left to right: right, left, down, up and stay.</p>
+</details>
+
+<p align="center">
+  <b>Local Actions</b><br>
+</p>
+
+<details>
+  <summary><i>W-Sprites</i></summary>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178588885-d05df9af-7320-40bf-8360-a0ac5f3f8a2d.png"></p>
+  <p align="center">The local actions learnt by the model can be interpreted as turn front, slash front, spellcast, slash left, turn right, turn left.</p>
+</details>
+<details>
+  <summary><i>Tennis</i></summary>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178588879-a2d207ef-70e4-4e06-980d-ea8b16692eeb.png"></p>
+  <p align="center">The actions capture some small variations of the pose of the tennis player, such as rotation and the distance between the legs.</p>
+</details>
+<details>
+  <summary><i>BAIR</i></summary>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178588869-6b12f25a-6916-4007-b8c1-b459ea2f9e63.png"></p>
+  <p align="center">The actions capture some local deformations of the robot arm, i.e. the state of the manipulator (open / close).</p>
 </details>
 
 <p align="center">
@@ -137,29 +160,35 @@ GLASS automatically separates the foreground from the background in video sequen
     <img src="https://user-images.githubusercontent.com/32042066/178584510-88a176ab-6289-415c-82ad-524d908cc0ce.gif">
     <img src="https://user-images.githubusercontent.com/32042066/178584560-49ca644e-7a1d-49b2-97bc-30d528b869c7.gif">
   </p>
+  <p align="center">
+    Row by row: Original videos, reconstruction and motion transfer examples on the Tennis dataset. Note the ability of GLASS to generate very diverse videos from the same initial frame.
+  </p>
 </details>
 <details>
   <summary><i>BAIR</i></summary>
   <p align="center">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178586943-a9cb58a9-bcd1-406e-bbe1-ae47263c1f86.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587017-acd9b915-8072-4110-a1eb-c95558b17dab.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587095-30aea0db-afc8-4491-bdf5-1cec3d9f8a0b.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587226-687d44ef-6a99-483a-bbed-43f11581ab7e.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587297-e4e90b4a-6d0a-4eb1-9172-7d7da06fbdd2.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178586943-a9cb58a9-bcd1-406e-bbe1-ae47263c1f86.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587017-acd9b915-8072-4110-a1eb-c95558b17dab.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587095-30aea0db-afc8-4491-bdf5-1cec3d9f8a0b.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587226-687d44ef-6a99-483a-bbed-43f11581ab7e.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587297-e4e90b4a-6d0a-4eb1-9172-7d7da06fbdd2.gif">
   </p>
   <p align="center">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587661-db15154d-bffd-49cb-9e96-4d22c727bb33.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587686-5446781e-6fa8-4c9d-98f9-fd098a4bd13e.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587714-a345343d-39a8-49aa-8433-22dc29243483.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587739-4c0447d4-9375-4682-a01d-ee8bfe78ee30.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587757-019541af-d640-4766-9a5f-6b5faaffbeb0.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587661-db15154d-bffd-49cb-9e96-4d22c727bb33.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587686-5446781e-6fa8-4c9d-98f9-fd098a4bd13e.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587714-a345343d-39a8-49aa-8433-22dc29243483.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587739-4c0447d4-9375-4682-a01d-ee8bfe78ee30.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587757-019541af-d640-4766-9a5f-6b5faaffbeb0.gif">
   </p>
   <p align="center">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587770-f85f5509-3ebf-4bb6-8fc3-1552d30166b5.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587790-fcd2516d-fed0-43e5-b272-4779611afe66.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587810-3113d210-9d66-4fb1-a405-292546a86d95.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587828-10e33d1a-b3f5-4b55-9c77-8c7f37004d85.gif">
-    <img width=190 src="https://user-images.githubusercontent.com/32042066/178587850-9a7e440e-5ef7-4bcf-84ba-4e53bba4ba4e.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587770-f85f5509-3ebf-4bb6-8fc3-1552d30166b5.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587790-fcd2516d-fed0-43e5-b272-4779611afe66.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587810-3113d210-9d66-4fb1-a405-292546a86d95.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587828-10e33d1a-b3f5-4b55-9c77-8c7f37004d85.gif">
+    <img width=150 src="https://user-images.githubusercontent.com/32042066/178587850-9a7e440e-5ef7-4bcf-84ba-4e53bba4ba4e.gif">
+  </p>
+  <p align="center">
+    Row by row: Original videos, reconstruction and motion transfer examples on the Tennis dataset. Note the ability of GLASS to generate very diverse videos from the same initial frame.
   </p>
 </details>
 
