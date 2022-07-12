@@ -1,56 +1,58 @@
-details {
-  width: 50%;
-  margin: 0 auto ;
-  background: #282828;
-  margin-bottom: .5rem;
-  box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
-  border-radius: 5px;
-  overflow: hidden;
-}
+<style>
+  details {
+    width: 50%;
+    margin: 0 auto ;
+    background: #282828;
+    margin-bottom: .5rem;
+    box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+    border-radius: 5px;
+    overflow: hidden;
+  }
 
-summary {
-  padding: 1rem;
-  display: block;
-  background: rgb(26, 122, 118);
-  padding-left: 2.2rem;
-  position: relative;
-  cursor: pointer;
-}
+  summary {
+    padding: 1rem;
+    display: block;
+    background: rgb(26, 122, 118);
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+  }
 
-summary:before {
-  content: '';
-  border-width: .4rem;
-  border-style: solid;
-  border-color: transparent transparent transparent #fff;
-  position: absolute;
-  top: 1.3rem;
-  left: 1rem;
-  transform: rotate(0);
-  transform-origin: .2rem 50%;
-  transition: .25s transform ease;
-}
+  summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+  }
 
-/* THE MAGIC 🧙‍♀️ */
-details[open] > summary:before {
-  transform: rotate(90deg);
-}
+  /* THE MAGIC 🧙‍♀️ */
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
 
 
-details summary::-webkit-details-marker {
-  display:none;
-}
+  details summary::-webkit-details-marker {
+    display:none;
+  }
 
-/////////////////////////////////////////
+  /////////////////////////////////////////
 
-body {
-  background: #222;
-  height: 100vh;
-  font-family: sans-serif;
-  color: white;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  margin-top: 2rem;
-}
+  body {
+    background: #222;
+    height: 100vh;
+    font-family: sans-serif;
+    color: white;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+  }
+</style>
 
 ----------------------------
 
@@ -115,6 +117,14 @@ GLASS automatically separates the foreground from the background in video sequen
 <details>
   <summary><i>W-Sprites</i></summary>
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
+</details>
+<details>
+  <summary><i>Tennis</i></summary>
+  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178578377-451b921f-f7e6-4a73-81ef-6f6fed8f57bf.gif"></p>
+</details>
+<details>
+  <summary><i>BAIR</i></summary>
+  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178578501-ec41c0b2-28fd-4545-b60c-1fbdf52e616d.gif"></p>
 </details>
 
 <p align="center">
