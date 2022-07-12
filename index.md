@@ -83,7 +83,7 @@ GLASS automatically separates the foreground from the background in video sequen
 <p align="center">
   <b>Global Actions</b><br>
 </p>
-<button class="accordion">W-Sprites</button>
+<button class="accordion"><p align="center"><i>W-Sprites</i></p></button>
 <div class="panel">
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
 </div>
@@ -95,6 +95,10 @@ GLASS automatically separates the foreground from the background in video sequen
 <div class="panel">
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527406-b146ba7f-74c2-433f-9a6e-d033ac2390a4.gif"></p>
 </div>
+
+<p align="center">
+  <b>Motion Transfer</b><br>
+</p>
 
 ## Citation
  
