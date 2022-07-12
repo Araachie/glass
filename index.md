@@ -180,50 +180,6 @@
   }
 </script>
 
-<div id="accordion" class="accordion" style="max-width: 30rem; margin: 1rem auto;">
-  <div class="accordion__item">
-    <div class="accordion__header">
-      Заголовок 1
-    </div>
-    <div class="accordion__body">
-      <div class="accordion__content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur autem, mollitia rem aperiam
-        fugit eos officia vel quidem quis officiis dolores porro beatae veritatis tenetur. Culpa ex libero a!
-      </div>
-    </div>
-  </div>
-  <div class="accordion__item">
-    <div class="accordion__header">
-      Заголовок 2
-    </div>
-    <div class="accordion__body">
-      <div class="accordion__content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos a autem perspiciatis sit eum
-        exercitationem expedita omnis ipsam voluptate veritatis dolores similique eligendi, earum quasi officia in
-        facilis dolorum!
-      </div>
-    </div>
-  </div>
-  <div class="accordion__item">
-    <div class="accordion__header">
-      Заголовок 3
-    </div>
-    <div class="accordion__body">
-      <div class="accordion__content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta pariatur dolore consectetur perferendis libero
-        nam sit magni voluptatibus voluptates autem nesciunt, praesentium quidem deserunt ipsa totam esse ullam? Quod,
-        maiores!
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  new ItcAccordion(document.querySelector('.accordion'), {
-    alwaysOpen: true
-  });
-</script>
-
 ----------------------------
 
 <p align="center">
@@ -283,17 +239,38 @@ GLASS automatically separates the foreground from the background in video sequen
 <p align="center">
   <b>Global Actions</b><br>
 </p>
-<button class="accordion"><i>W-Sprites</i></button>
-<div class="panel">
-  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
-</div>
-<button class="accordion"><i>Tennis</i></button>
-<div class="panel">
-  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527099-b0ca39a0-72c0-4de4-aabc-d8a4575b3e3b.gif"></p>
-</div>
-<button class="accordion"><i>BAIR</i></button>
-<div class="panel">
-  <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527406-b146ba7f-74c2-433f-9a6e-d033ac2390a4.gif"></p>
+
+<div id="accordion" class="accordion" style="max-width: 30rem; margin: 1rem auto;">
+  <div class="accordion__item">
+    <div class="accordion__header">
+      <i>W-Sprites</i>
+    </div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion__item">
+    <div class="accordion__header">
+      <i>Tennis</i>
+    </div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527099-b0ca39a0-72c0-4de4-aabc-d8a4575b3e3b.gif"></p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion__item">
+    <div class="accordion__header">
+      <i>BAIR</i>
+    </div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527406-b146ba7f-74c2-433f-9a6e-d033ac2390a4.gif"></p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <p align="center">
