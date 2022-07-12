@@ -1,6 +1,3 @@
-
-
-<html>
 ----------------------------
 
 <p align="center">
@@ -37,5 +34,3 @@ We feed the segmented foreground <img src="https://latex.codecogs.com/svg.image?
 ### Results
 
 ...
-  
-</html>
