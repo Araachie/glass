@@ -67,7 +67,7 @@ a{
   <input type="checkbox" id="faq-1">
   <h1><label for="faq-1">What Is This ?</label></h1>
   <div class="p">
-    <p>This a very very simple accordion.</p>
+    <p><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
   </div>
 </div>
 <div class="c">
