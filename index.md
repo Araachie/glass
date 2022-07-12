@@ -125,17 +125,17 @@ GLASS automatically separates the foreground from the background in video sequen
 
 <details>
   <summary><i>W-Sprites</i></summary>
-  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178588885-d05df9af-7320-40bf-8360-a0ac5f3f8a2d.png"></p>
+  <p align="center"><img width=600 src="https://user-images.githubusercontent.com/32042066/178588885-d05df9af-7320-40bf-8360-a0ac5f3f8a2d.png"></p>
   <p align="center">The local actions learnt by the model can be interpreted as turn front, slash front, spellcast, slash left, turn right, turn left.</p>
 </details>
 <details>
   <summary><i>Tennis</i></summary>
-  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178588879-a2d207ef-70e4-4e06-980d-ea8b16692eeb.png"></p>
+  <p align="center"><img width=600 src="https://user-images.githubusercontent.com/32042066/178588879-a2d207ef-70e4-4e06-980d-ea8b16692eeb.png"></p>
   <p align="center">The actions capture some small variations of the pose of the tennis player, such as rotation and the distance between the legs.</p>
 </details>
 <details>
   <summary><i>BAIR</i></summary>
-  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178588869-6b12f25a-6916-4007-b8c1-b459ea2f9e63.png"></p>
+  <p align="center"><img width=600 src="https://user-images.githubusercontent.com/32042066/178588869-6b12f25a-6916-4007-b8c1-b459ea2f9e63.png"></p>
   <p align="center">The actions capture some local deformations of the robot arm, i.e. the state of the manipulator (open / close).</p>
 </details>
 
