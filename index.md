@@ -1,8 +1,8 @@
 <style>
   details {
-    width: 50%;
+    width: 100%;
     margin: 0 auto ;
-    background: #282828;
+    background: rgb(255, 255, 255);
     margin-bottom: .5rem;
     box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
     border-radius: 5px;
@@ -31,17 +31,13 @@
     transition: .25s transform ease;
   }
 
-  /* THE MAGIC 🧙‍♀️ */
   details[open] > summary:before {
     transform: rotate(90deg);
   }
 
-
   details summary::-webkit-details-marker {
     display:none;
   }
-
-  /////////////////////////////////////////
 
   body {
     background: #222;
