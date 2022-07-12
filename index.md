@@ -1,184 +1,90 @@
 <style>
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700");
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+body{
+  font-family: "Poppins", sans-serif;
+}
+div.c{
+  position: relative;
+  margin:2em;
+}
+input{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
+  opacity:0;
+  visibility: 0;
 }
-
-.active, .accordion:hover {
-  background-color: #ccc; 
+h1{
+  background:steelblue;
+  color:white;
+  padding:1em;
+  position: relative;
 }
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
+label::before{
+  content:"";
+  display: inline-block;
+  border: 15px solid transparent;
+  border-left:20px solid white;
+}
+label{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+div.p{
+  max-height:0px;
   overflow: hidden;
+  transition:max-height 0.5s;
+  background-color: white;
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+div.p p {
+  padding:2em;
+}
+input:checked ~ h1 label::before{
+  border-left:15px solid transparent;
+  border-top:20px solid white;
+  margin-top:12px;
+  margin-right:10px;
+}
+input:checked ~ h1 ~ div.p{
+  max-height:100px;
+}
+a{
+  color:steelblue;
 }
 </style>
 
-
-<style>
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-  }
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  .accordion__item {
-    margin-bottom: 0.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%);
-  }
-
-  .accordion__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    color: #fff;
-    font-weight: 500;
-    background-color: #0d6efd;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease-out;
-  }
-
-  .accordion__header::after {
-    flex-shrink: 0;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-left: auto;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-size: 1.25rem;
-    content: "";
-    transition: transform 0.2s ease-out;
-  }
-
-  .accordion__item_show .accordion__header::after,
-  .accordion__item_slidedown .accordion__header::after {
-    transform: rotate(-180deg);
-  }
-
-  .accordion__header:hover {
-    background-color: #0b5ed7;
-  }
-
-  .accordion__item:not(.accordion__item_show) .accordion__header {
-    border-bottom-right-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-  }
-
-  .accordion__content {
-    padding: 0.75rem 1rem;
-    background: #fff;
-    border-bottom-right-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-  }
-
-  .accordion__item:not(.accordion__item_show) .accordion__body {
-    display: none;
-  }
-</style>
-<script>
-  class ItcAccordion {
-    constructor(target, config) {
-      this._el = typeof target === 'string' ? document.querySelector(target) : target;
-      const defaultConfig = {
-        alwaysOpen: true,
-        duration: 350
-      };
-      this._config = Object.assign(defaultConfig, config);
-      this.addEventListener();
-    }
-    addEventListener() {
-      this._el.addEventListener('click', (e) => {
-        const elHeader = e.target.closest('.accordion__header');
-        if (!elHeader) {
-          return;
-        }
-        if (!this._config.alwaysOpen) {
-          const elOpenItem = this._el.querySelector('.accordion__item_show');
-          if (elOpenItem) {
-            elOpenItem !== elHeader.parentElement ? this.toggle(elOpenItem) : null;
-          }
-        }
-        this.toggle(elHeader.parentElement);
-      });
-    }
-    show(el) {
-      const elBody = el.querySelector('.accordion__body');
-      if (elBody.classList.contains('collapsing') || el.classList.contains('accordion__item_show')) {
-        return;
-      }
-      elBody.style['display'] = 'block';
-      const height = elBody.offsetHeight;
-      elBody.style['height'] = 0;
-      elBody.style['overflow'] = 'hidden';
-      elBody.style['transition'] = `height ${this._config.duration}ms ease`;
-      elBody.classList.add('collapsing');
-      el.classList.add('accordion__item_slidedown');
-      elBody.offsetHeight;
-      elBody.style['height'] = `${height}px`;
-      window.setTimeout(() => {
-        elBody.classList.remove('collapsing');
-        el.classList.remove('accordion__item_slidedown');
-        elBody.classList.add('collapse');
-        el.classList.add('accordion__item_show');
-        elBody.style['display'] = '';
-        elBody.style['height'] = '';
-        elBody.style['transition'] = '';
-        elBody.style['overflow'] = '';
-      }, this._config.duration);
-    }
-    hide(el) {
-      const elBody = el.querySelector('.accordion__body');
-      if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion__item_show')) {
-        return;
-      }
-      elBody.style['height'] = `${elBody.offsetHeight}px`;
-      elBody.offsetHeight;
-      elBody.style['display'] = 'block';
-      elBody.style['height'] = 0;
-      elBody.style['overflow'] = 'hidden';
-      elBody.style['transition'] = `height ${this._config.duration}ms ease`;
-      elBody.classList.remove('collapse');
-      el.classList.remove('accordion__item_show');
-      elBody.classList.add('collapsing');
-      window.setTimeout(() => {
-        elBody.classList.remove('collapsing');
-        elBody.classList.add('collapse');
-        elBody.style['display'] = '';
-        elBody.style['height'] = '';
-        elBody.style['transition'] = '';
-        elBody.style['overflow'] = '';
-      }, this._config.duration);
-    }
-    toggle(el) {
-      el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
-    }
-  }
-</script>
+<div class="c">
+  <input type="checkbox" id="faq-1">
+  <h1><label for="faq-1">What Is This ?</label></h1>
+  <div class="p">
+    <p>This a very very simple accordion.</p>
+  </div>
+</div>
+<div class="c">
+  <input type="checkbox" id="faq-2">
+  <h1><label for="faq-2">With Pure Css ?</label></h1>
+  <div class="p">
+    <p>Yes with pure CSS and HTML.</p>
+  </div>
+</div>
+<div class="c">
+  <input type="checkbox" id="faq-3">
+  <h1><label for="faq-3">Where did you get inpiration ?</label></h1>
+  <div class="p">
+    <p>I was inpired by an article on css-tricks. <a href="https://css-tricks.com/the-checkbox-hack/">link to article</a>
+    </p>
+  </div>
+</div>
 
 ----------------------------
 
