@@ -11,10 +11,14 @@
   summary {
     padding: 1rem;
     display: block;
-    background: rgba(30, 138, 101, 0.5);
+    background: rgba(20, 94, 146, 0.8);
     padding-left: 2.2rem;
     position: relative;
     cursor: pointer;
+  }
+  
+  summary > i {
+    color: white
   }
 
   summary:before {
