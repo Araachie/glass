@@ -1,3 +1,11 @@
+<style
+  type="text/css">
+h1 {color:red;}
+
+p {color:blue;}
+</style>
+<p>okay</p>
+
 ----------------------------
 
 <p align="center">
@@ -8,6 +16,10 @@
 <p align="center">
   <b style="font-size: 24px">Supplementary:</b><br>
   <a href="https://arxiv.org/abs/2204.06558" style="font-size: 24px; text-decoration: none">[Arxiv]</a>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/32042066/178519016-d447fe4a-2d43-4495-baab-82b85de6a30a.png">
 </p>
 
 ## Abstract
@@ -83,11 +95,6 @@ GLASS automatically separates the foreground from the background in video sequen
   </summary>
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527406-b146ba7f-74c2-433f-9a6e-d033ac2390a4.gif"></p>
 </details>
-
-<p align="center">
-  <b>Controllable generation</b><br>
-  <img src="https://user-images.githubusercontent.com/32042066/178519016-d447fe4a-2d43-4495-baab-82b85de6a30a.png">
-</p>
 
 ## Citation
  
