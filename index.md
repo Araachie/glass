@@ -81,9 +81,3 @@ arXiv preprint arXiv:2204.06558.
       year = {2022},
       copyright = {Creative Commons Attribution 4.0 International}
     }
-
-### References
-
-[1] Menapace, W., Lathuili`ere, S., Tulyakov, S., Siarohin, A., Ricci, E.: Playable video
-generation. In: Proceedings of the IEEE/CVF Conference on Computer Vision and
-Pattern Recognition. pp. 10061–10070 (2021)
