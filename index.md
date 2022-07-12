@@ -45,9 +45,10 @@ Here we provide some sample videos from the *W-Sprites* dataset:
 <img src="https://user-images.githubusercontent.com/32042066/178506364-16cb985d-97b2-4bfd-ac10-051b936628ad.gif">
 <img src="https://user-images.githubusercontent.com/32042066/178506599-9f9d398d-24ee-4d9f-a685-5e4422df9b36.gif">
 <img src="https://user-images.githubusercontent.com/32042066/178506752-764e1ee6-bff0-4951-a97d-39b4485ce4f0.gif">
-<img src="https://user-images.githubusercontent.com/32042066/178506768-2797079e-6385-4c62-ae4f-7ad0aa05101e.gif">
+<img src="https://user-images.githubusercontent.com/32042066/178507581-3690cb7b-ced1-4018-a285-7be5d721b1d3.gif">
 </p>
-  
+
+
 ### Results
 
 ...
