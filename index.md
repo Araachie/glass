@@ -1,10 +1,28 @@
-<style
-  type="text/css">
-h1 {color:red;}
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
 
-p {color:blue;}
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
 </style>
-<p>okay</p>
 
 ----------------------------
 
@@ -65,16 +83,10 @@ GLASS automatically separates the foreground from the background in video sequen
 <p align="center">
   <b>Global Actions</b><br>
 </p>
-<details>
-  <summary>
-    <p align="center">
-      <button class="accordion">
-        <i>W-Sprites</i>
-      </button>
-    </p>
-  </summary>
+<button class="accordion">W-Sprites</button>
+<div class="panel">
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
-</details>
+</div>
 <details>
   <summary>
     <p align="center">
@@ -114,3 +126,20 @@ arXiv preprint arXiv:2204.06558.
       year = {2022},
       copyright = {Creative Commons Attribution 4.0 International}
     }
+    
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
