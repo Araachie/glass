@@ -37,6 +37,10 @@
   details summary::-webkit-details-marker {
     display:none;
   }
+  
+  div.a {
+    transform: rotate(90deg);
+  }
 </style>
 
 ----------------------------
@@ -115,6 +119,28 @@ GLASS automatically separates the foreground from the background in video sequen
 <p align="center">
   <b>Motion Transfer</b><br>
 </p>
+
+<details>
+  <summary><i>Tennis</i></summary>
+  <p align="center">
+    <div class="a">Original</div>
+    <img src="https://user-images.githubusercontent.com/32042066/178583770-8e7a2158-7f89-4d5c-b0fb-e0da6ddf6293.gif">
+    <img src="https://user-images.githubusercontent.com/32042066/178583883-72b8fa54-5245-4908-9c45-39ba2382d817.gif">
+    <img src="https://user-images.githubusercontent.com/32042066/178584071-b7411a9a-69d5-42b1-bf82-baa2fdc071f1.gif">
+  </p>
+  <p align="center">
+    <div class="a">Reconstruction</div>
+    <img src="https://user-images.githubusercontent.com/32042066/178584160-7f770121-d2d7-4e28-9d32-6ecfa71c78dc.gif">
+    <img src="https://user-images.githubusercontent.com/32042066/178584244-4fb85734-ab35-46e2-b27f-1eac203d3a18.gif">
+    <img src="https://user-images.githubusercontent.com/32042066/178584285-a084a4da-1199-4725-ab40-6360c62a5c3f.gif">
+  </p>
+  <p align="center">
+    <div class="a">Transfer</div>
+    <img src="https://user-images.githubusercontent.com/32042066/178584376-5062b9aa-d327-4dc1-8abb-bec87ceab90b.gif">
+    <img src="https://user-images.githubusercontent.com/32042066/178584510-88a176ab-6289-415c-82ad-524d908cc0ce.gif">
+    <img src="https://user-images.githubusercontent.com/32042066/178584560-49ca644e-7a1d-49b2-97bc-30d528b869c7.gif">
+  </p>
+</details>
 
 ## Citation
  
