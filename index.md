@@ -119,6 +119,7 @@ Here we provide some sample videos from the *W-Sprites* dataset:
 <img src="https://user-images.githubusercontent.com/32042066/178507581-3690cb7b-ced1-4018-a285-7be5d721b1d3.gif">
 </p>
 
+Please, check the paper for details and the official GitHub repository for instructions on generating the data.
 
 ## Results
 
