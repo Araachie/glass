@@ -135,3 +135,9 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
+  
+<script type="text/javascript">
+// JavaScript example
+
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
