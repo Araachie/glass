@@ -13,14 +13,18 @@ We present GLASS, a method for Global and Local Action-driven Sequence Synthesis
 
 GLASS consists of two stages: One is the Global Motion Analysis (GMA) and the other is the Local Motion Analysis (LMA). GMA aims to separate the foreground agent from the background and to also regress the 2D shifts between foregrounds and backgrounds. LMA aims to learn a representation for local actions that can describe deformations other than 2D shifts. Towards this purpose it uses a Recurrent Neural Network (RNN) and a feature encoding of a frame and of the global and local actions as input. Both GMA and LMA stages are jointly trained in an unsupervised manner.
 
-#### Global Motion Analysis
+<p align="center">
+<b>Global Motion Analysis</b>
+</p>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/32042066/178463132-8b27e3aa-f084-44a5-b71b-80635e418ee6.png">
 </p>
 
 Two input frames <img src="https://latex.codecogs.com/svg.image?I_t"> and <img src="https://latex.codecogs.com/svg.image?I_{t+1}"> are fed (separately) to a segmentation network to output the foreground masks <img src="https://latex.codecogs.com/svg.image?m_t"> and <img src="https://latex.codecogs.com/svg.image?m_{t+1}"> respectively. The masks are used to separate the foregrounds <img src="https://latex.codecogs.com/svg.image?f_t"> and <img src="https://latex.codecogs.com/svg.image?f_{t+1}"> from the backgrounds <img src="https://latex.codecogs.com/svg.image?b_t"> and <img src="https://latex.codecogs.com/svg.image?b_{t+1}">. The concatenated foregrounds are fed to the network Pf to predict their relative shift <img src="https://latex.codecogs.com/svg.image?\Delta_F">. We use <img src="https://latex.codecogs.com/svg.image?\Delta_F"> to shift <img src="https://latex.codecogs.com/svg.image?f_t"> and match it to <img src="https://latex.codecogs.com/svg.image?f_{t+1}"> via an <img src="https://latex.codecogs.com/svg.image?L_2"> loss (foregrounds may not match exactly and this loss does not penalize small errors). In the case of the backgrounds we also train an inpainting network before shifting them with the predicted <img src="https://latex.codecogs.com/svg.image?\Delta_B"> and matching them with an <img src="https://latex.codecogs.com/svg.image?L_1"> loss (unlike foregrounds, we can expect backgrounds to match).
 
-#### Local Motion Analysis
+<p align="center">
+<b>Local Motion Analysis</b>
+</p>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/32042066/178464184-f9e3b721-02be-43fb-83bc-21cae391a18c.png">
 </p>
