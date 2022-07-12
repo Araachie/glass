@@ -54,15 +54,33 @@ GLASS automatically separates the foreground from the background in video sequen
   <b>Global Actions</b><br>
 </p>
 <details>
-  <summary><i>W-Sprites</i></summary>
+  <summary>
+    <p align="center">
+      <button class="accordion">
+        <i>W-Sprites</i>
+      </button>
+    </p>
+  </summary>
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178521009-c52694a3-04d3-4ddd-a404-85b3a8733ad3.gif"></p>
 </details>
 <details>
-  <summary><i>Tennis</i></summary>
+  <summary>
+    <p align="center">
+      <button class="accordion">
+        <i>Tennis</i>
+      </button>
+    </p>
+  </summary>
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527099-b0ca39a0-72c0-4de4-aabc-d8a4575b3e3b.gif"></p>
 </details>
 <details>
-  <summary><i>BAIR</i></summary>
+  <summary>
+    <p align="center">
+      <button class="accordion">
+        <i>BAIR</i>
+      </button>
+    </p>
+  </summary>
   <p align="center"><img src="https://user-images.githubusercontent.com/32042066/178527406-b146ba7f-74c2-433f-9a6e-d033ac2390a4.gif"></p>
 </details>
 
