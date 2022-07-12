@@ -45,19 +45,40 @@
   div.a {
     transform: rotate(90deg);
   }
+  
+  #two_col {
+     width:600px;
+     margin:0 auto;
+  }
+
+  #left_col {
+     float:left;
+     width:300px;
+  }
+
+  #right_col {
+     float:right;
+     width:300px;
+  }
 </style>
 
 ----------------------------
 
-<p align="center">
-  <b style="font-size: 24px">Paper:</b><br>
-  <a href="https://arxiv.org/abs/2204.06558" style="font-size: 24px; text-decoration: none">[Arxiv]</a>
-</p>
+<div id="two_col">
+  <div id="left_col">
+    <p align="center">
+      <b style="font-size: 24px">Paper:</b><br>
+      <a href="https://arxiv.org/abs/2204.06558" style="font-size: 24px; text-decoration: none">[Arxiv]</a>
+    </p>
+  </div>
 
-<p align="center">
-  <b style="font-size: 24px">Supplementary:</b><br>
-  <a href="https://arxiv.org/abs/2204.06558" style="font-size: 24px; text-decoration: none">[Arxiv]</a>
-</p>
+  <div id="right_col">
+    <p align="center">
+      <b style="font-size: 24px">Supplementary:</b><br>
+      <a href="https://arxiv.org/abs/2204.06558" style="font-size: 24px; text-decoration: none">[Arxiv]</a>
+    </p>
+  </div>
+</div>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/32042066/178519016-d447fe4a-2d43-4495-baab-82b85de6a30a.png">
