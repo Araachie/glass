@@ -47,18 +47,18 @@
   }
   
   #two_col {
-     width:600px;
+     width:96%;
      margin:0 auto;
   }
 
   #left_col {
      float:left;
-     width:300px;
+     width:46%;
   }
 
   #right_col {
      float:right;
-     width:300px;
+     width:46%;
   }
 </style>
 
