@@ -117,8 +117,8 @@ Here we provide some sample videos from the *W-Sprites* dataset:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/32042066/178506364-16cb985d-97b2-4bfd-ac10-051b936628ad.gif">
 <img src="https://user-images.githubusercontent.com/32042066/178506599-9f9d398d-24ee-4d9f-a685-5e4422df9b36.gif">
-<img src="https://user-images.githubusercontent.com/32042066/178506752-764e1ee6-bff0-4951-a97d-39b4485ce4f0.gif">
-<img src="https://user-images.githubusercontent.com/32042066/178507581-3690cb7b-ced1-4018-a285-7be5d721b1d3.gif">
+<img src="https://user-images.githubusercontent.com/32042066/178690286-0522fa56-aeb6-472f-843b-58a5594c10de.gif">
+<img src="https://user-images.githubusercontent.com/32042066/178690308-43626399-0f8c-44f6-bede-0572e66c4b8b.gif">
 </p>
 
 Please, check the paper for details and the official GitHub repository for instructions on generating the data.
