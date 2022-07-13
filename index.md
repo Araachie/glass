@@ -158,7 +158,7 @@ GLASS automatically separates the foreground from the background in video sequen
 </details>
 <details>
   <summary><i>Tennis</i></summary>
-  <p align="center"><img width=600 src="https://user-images.githubusercontent.com/32042066/178588879-a2d207ef-70e4-4e06-980d-ea8b16692eeb.png"></p>
+  <p align="center"><img width=800 src="https://user-images.githubusercontent.com/32042066/178588879-a2d207ef-70e4-4e06-980d-ea8b16692eeb.png"></p>
   <p align="center">The actions capture some small variations of the pose of the tennis player, such as rotation and the distance between the legs.</p>
 </details>
 <details>
