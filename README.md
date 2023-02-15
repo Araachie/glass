@@ -27,22 +27,21 @@
 
 ## Citation
 
-The paper is to appear in the Proceedings of the 17th European Conference on Computer Vision in 2022. 
-In the meantime we suggest using the arxiv preprint bibref.
+Davtyan, A., Favaro, P. (2022). Controllable Video Generation Through Global and Local Motion Dynamics. In: Avidan, S., Brostow, G., Cissé, M., Farinella, G.M., Hassner, T. (eds) Computer Vision – ECCV 2022. ECCV 2022. Lecture Notes in Computer Science, vol 13677. Springer, Cham. https://doi.org/10.1007/978-3-031-19790-1_5
 
-Davtyan, A. & Favaro, P. (2022). Controllable Video Generation through Global and Local Motion Dynamics.
-arXiv preprint arXiv:2204.06558.
-
-    @misc{https://doi.org/10.48550/arxiv.2204.06558,
-      doi = {10.48550/ARXIV.2204.06558},
-      url = {https://arxiv.org/abs/2204.06558},
-      author = {Davtyan, Aram and Favaro, Paolo},
-      keywords = {Computer Vision and Pattern Recognition (cs.CV), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
-      title = {Controllable Video Generation through Global and Local Motion Dynamics},
-      publisher = {arXiv},
-      year = {2022},
-      copyright = {Creative Commons Attribution 4.0 International}
+    @InProceedings{10.1007/978-3-031-19790-1_5,
+		author="Davtyan, Aram and Favaro, Paolo",
+		editor="Avidan, Shai and Brostow, Gabriel and Ciss{\'e}, Moustapha and Farinella, Giovanni Maria and Hassner, Tal",
+		title="Controllable Video Generation Through Global and Local Motion Dynamics",
+		booktitle="Computer Vision -- ECCV 2022",
+		year="2022",
+		publisher="Springer Nature Switzerland",
+		address="Cham",
+		pages="68--84",
+		isbn="978-3-031-19790-1"
     }
+
+
 
 
 ## Prerequisites
